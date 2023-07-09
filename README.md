@@ -42,6 +42,8 @@ To faciliate comparing the effects of variations in larval characteristics, the 
 
 In this example, variety 1 has 40 km of adult habitat, ranging from -100 km to -60 km from the head of the estuary. Adult habitats for varieties 2, 3 and 4 are successively displaced 10 km towards the mouth of the estuary.
 
+The model plots the magnitude of tidal exchanges, the volume of river inputs, the horizontal and vertical distributions of larvae, and the velocity and larval positions over the estuary. These plots are updated at an interval determined (in units of seconds) by **plot_interval** (default is every two hours).
 
+The model can generate images of each plot, which can be used to make movies of output, by setting **print_plot_flag** to 1 (default is 0, do not make movie images). Images are placed in a directory or folder specified by the variable **directory**, and are given the prefix specifeid by the variable **run_name**. Generating images slows the simulation and takes up considerable disk space, so it's recommended not to make images except when intending to make movies.
 
 
