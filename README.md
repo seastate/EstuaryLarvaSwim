@@ -23,9 +23,25 @@ In addition to the different estuary geographies and levels of river inputs prov
    - **Z_substrate** is the vertical extent of depth in which larvae are released (e.g., [0.99 1.] means larvae are released in the bottom 1% of the water column above adult habitat).
    - **settle_only_within_substrate_flag** determines whether larvae can settle anywhere (0) or must settle only within the adult habitat (0).
 2. Timing
-  - **release_date** is the time (in units of days) that larvae are released, in relation to the start of the simulation and the onset of increased riverine inputs from Spring runoff.
-  - **stage1_duration_days** is the number of days in the early development (*pre-competent*) stage of larval development, during which larvae *cannot* yet settle.
-  - **stage2_duration_days** is the number of days in the late development (*competent*) stage of larval development, during which larvae *must* settle.
+   - **release_date** is the time (in units of days) that larvae are released, in relation to the start of the simulation and the onset of increased riverine inputs from Spring runoff.
+   - **stage1_duration_days** is the number of days in the early development (*pre-competent*) stage of larval development, during which larvae *cannot* yet settle.
+   - **stage2_duration_days** is the number of days in the late development (*competent*) stage of larval development, during which larvae *must* settle.
+   - **duration_days** is the number of days to run the simulation, after the release date
 3. Behavior
    - **v_particle_stage1** is the up- or down-swimming behavior during stage 1, the pre-competent period, with positive velocity in the downwards direction (oceanographers measure vertical position, *Z*, increasing with depth).
    - **v_particle_stage2** is the up- or down-swimming behavior during stage 1, the competent period.
+4. Display
+   - **colors** determines the color in which larvae are plotted, superimposed on a filled contour plot of horizontal current velocity (e.g. 'r' for red, 'm' for magenta, 'b' for blue, 'c' for cyan).
+
+To faciliate comparing the effects of variations in larval characteristics, the model can simulate several varieties at the same time that vary in some or all of the above characteristics. Variations are set in the model by arrays of parameters. For example, the horizontal distribution of adult habitat for four variants could be
+
+       X_substrate = [-100 -60
+                      -90 -50
+                      -80 -40
+                      -70 -30];  
+
+In this example, variety 1 has 40 km of adult habitat, ranging from -100 km to -60 km from the head of the estuary. Adult habitats for varieties 2, 3 and 4 are successively displaced 10 km towards the mouth of the estuary.
+
+
+
+
