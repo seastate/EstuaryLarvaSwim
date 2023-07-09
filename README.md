@@ -1,2 +1,2 @@
 # EstaurayLarvaSwim
-A simple model of estuatrine transport and settlement in planktonic larvae
+A simple model of estuarine transport and settlement in planktonic larvae
